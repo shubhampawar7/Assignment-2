@@ -1,8 +1,129 @@
+:root {
+  --bg: #f2f6fa;
+  --scrollThumb: #c0cede;
+  --sideMenuBg: #002874;
+  --activeSideMenu: rgba(7, 70, 132, 0.5);
+  --activeSideMenuBorder: #2194ff;
+  --textDark: #06090f;
+  --textDark2: #111519;
+  --textColor: #0c1014;
+  --textLight: #7e8b9f;
+  --textGray: #586677;
+  --textDanger: #de474a;
+  --placeholder: #4f5357;
+  --border: #eff1f5;
+  --primaryBorder: #e5edf8;
+  --breadcrumb: #007ef3;
+  --grayBatch: #f8fafd;
+  --warning: #ffc80b;
+  --grayCountBatch: #eef2f5;
+  --teamsGrayBatch: #f7fbff;
+  --widgetsBg: #f5f8fc;
+  --widgetBorder: #eaeef2;
+  --btnPrimary: #007ef3;
+  --activityBg: #f8fbfd;
+  --iconBg: #f5f9fd;
+  --iconPrimary: #465aea;
+  --tableBorder: #eef2f7;
+  --grayCardBg: #f8fafd;
+  --chartTextDark: #18202c;
+  --profileBorder: #ECF0F3;
+  --profileLightText: #9EAAB4;
+  --profileMenuDark: #131B21;
+
+  --activeMenu: #1f94ff;
+  --activeMenu2: rgba(31, 148, 255, 0.5);
+  --primary: #1f94ff;
+  --primaryLightBg: #e2f0ff;
+  --primaryLight: #126afa;
+  --primaryBatchBg: #ebf5fd;
+  --primaryHover: #0082fa;
+  --secondary: #f5f9fd;
+  --secondaryHover: #f0f4f9;
+  --secondaryBtn: #aab8cf;
+  --dark: #1f2030;
+  --btnGray: #f2f5fa;
+  --btnGrayHover: #ebeff6;
+  --btnLight: #f0f3f8;
+  --activeBatch: rgba(31, 148, 255, 0.5);
+  --activeMenuBg: rgba(31, 148, 255, 0.05);
+  --borderLight: #d4dce0;
+  --border-dark: #c0cede33;
+  --cardHover: rgba(33, 193, 243, 0.03);
+  --menuHoverBg: rgba(31, 148, 255, 0.102);
+  --success: #009e24;
+  --successLight: #74c62b;
+  --danger: #f72142;
+  --dangerLightBg: rgba(255, 186, 183, 0.3);
+  --lightGray: #f0f4f9;
+  --pointBg: #e6eaf4;
+  --inputLine: #e6eaf4;
+  --checkCount: #102874;
+  --modal-bg: rgba(9, 13, 36, 0.21);
+  --white: #fff;
+  --dark-primary-color: #002874;
+  --wash-white: #f2f6fa;
+  --whiteHover: #f7fafd;
+  --gray: #7a8c98;
+  --toggleInputBg: #c0cede;
+  --tableHeaderBg: #f8fbfd;
+  --tableHeaderColor: #0a0e12;
+  --iconDark: #424c5d;
+  --iconLight: #a8afb4;
+  --teams: #4f5dc6;
+  --teamsChatBg: #929ceb;
+  --teamsBg: rgba(76, 80, 187, 0.051);
+  --teamsLightBg: #f8fafd;
+  --teamsBorder: #e6eaf4;
+  --teamsActiveGroup: #ebecfd;
+  --teamsMain: #4943af;
+  --teamsBlue: #0d6cff;
+  --teamsTextdark: #06090f;
+  --teamsBtnBorder: #edf1f7;
+  --word-doc-color: #226fea;
+  --avatarAlt: #697991;
+  --iconGray: #8191ac;
+  --lighGrayBg: #f9fbff;
+  --iconGray: #ccd2d7;
+  --batchPrimary: #7ec0ff;
+  --primaryLight: #2c9fff;
+  --successBatch: #e5fffc;
+  --successBatchIcon: #3fd1be;
+  --tableGrayBg: rgb(235, 242, 242, 0.5);
+  --lightGray2: #f4f4f5;
+  --grayBg: rgba(235, 242, 242, 0.4);
+  --grayBg2: #f9fafc;
+  --grayBg3: #fafbfc;
+  --taskType0: #ffd60a;
+  --taskType1: #76daac;
+  --taskType2: #ffb1b0;
+  --taskGrayBg: rgba(242, 245, 248, 0.4);
+  --tableRow:#FFF9F0;
+  --tableHeader:#F2F5F8;
+}
+
+@font-face {
+  font-family: "mecellem_bold";
+  src: url("https://www.mecellem.com/assets/fonts/Mecellem030822-Bold.woff2") format("woff2"),
+    url("https://www.mecellem.com/assets/fonts/Mecellem030822-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "mecellem_regular";
+  src: url("https://www.mecellem.com/assets/fonts/Mecellem030822-Regular.woff2") format("woff2"),
+    url("https://www.mecellem.com/assets/fonts/Mecellem030822-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "mecellem_semibold";
+  src: url("https://www.mecellem.com/assets/fonts/Mecellem310822-SemiBold.woff") format("woff2"),
+    url("https://www.mecellem.com/assets/fonts/Mecellem310822-SemiBold.woff2") format("woff");
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "mecellem_regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

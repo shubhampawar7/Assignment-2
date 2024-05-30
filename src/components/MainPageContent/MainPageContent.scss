@@ -1,0 +1,136 @@
+@import "../../styles/mixins.scss";
+.mainpage-content {
+  flex: 1;
+  display: flex;
+  .mc-table-content {
+    flex: 1;
+    .mtc-table-list {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      //   header
+      .mtl-header {
+        .mh-content {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: var(--tableHeader);
+          border-bottom: 1px solid var(--inputLine);
+          height: 40px;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+
+          .mc-arrow-icon {
+            width: 49px;
+          }
+
+          .mc-column {
+            flex: 2 1;
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--tableHeaderColor);
+            .mc-header-content {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+
+              .ml-down-arrow-icon {
+                @include box(10px);
+                cursor: pointer;
+              }
+              .mhc-label {
+                @include fontProperties(13px, 600, var(--textDark));
+              }
+            }
+          }
+        }
+      }
+
+      //body
+      .mtl-body-content {
+        .mctctl-body {
+          display: flex;
+          flex: 1;
+          border-bottom: 1px solid var(--inputLine);
+          .mb-row {
+            @include flexAlign();
+            flex: 1;
+            gap: 5px;
+            background-color: var(--taskGrayBg);
+            height: 40px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-left: 8px solid var(--textDanger);
+            transition: all 150ms ease-in-out;
+
+            .ml-down-arrow-icon-small {
+              @include box(15px);
+              cursor: pointer;
+            }
+            .mr-arrow-icon {
+              @include setToCenter();
+              width: 49px;
+              cursor: pointer;
+            }
+            .mr-task-comp {
+              flex: 1;
+              @include fontProperties(13px, 600, var(--tableHeaderColor));
+              .mtc-task-content {
+                @include flexAlign();
+                .mtc-label {
+                  @include fontProperties(13px, normal, va(--textLight));
+                }
+                .mtc-avatar {
+                  cursor: pointer;
+                }
+              }
+            }
+            .mr-menus {
+              width: 49px;
+              cursor: pointer;
+
+
+              //action menus 
+              .action-menus-comp {
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 0px 10px 40px #02090f26;
+                border-radius: 3px;
+                min-width: 100px;
+                right: 65px;
+                .amc-items{
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  border-bottom: 1px solid var(--inputLine);
+                  height: 28px;
+                  padding: 0 7px;
+                  .ai-content{
+                    @include fontProperties(13px, normal, va(--textLight));
+
+                  }
+                  &:last-child {
+                    border-bottom: unset;
+                }
+                  .ai-edit-icon{
+                    @include setToCenter();
+                    @include box(10px)
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            .mb-row {
+              border-left: 8px solid var(--warning);
+            }
+            .mb-row {
+              background: rgba(237, 249, 255, 0.749);
+            }
+          }
+        }
+      }
+    }
+  }
+}

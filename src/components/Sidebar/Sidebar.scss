@@ -1,0 +1,167 @@
+@import "../../styles/mixins.scss";
+
+.sidebar {
+    @include verticalFlex();
+    gap: 10px;
+    @include box(74px, 100%);
+
+    // head logo section
+    .s-profile-section {
+        @include setToCenter();
+        height: 80px;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+
+        .sps-profile {
+            @include setToCenter();
+            border-radius: 5px;
+            overflow: hidden;
+            @include box(40px);
+            object-fit: cover;
+        }
+
+        .sps-app-name {
+            @include fontProperties(11px, 600, #fff);
+        }
+    }
+
+    // Logo section end 
+    .s-menus-content {
+        @include verticalFlex();
+        flex: 1;
+        width: 100%;
+        gap: 5px;
+        overflow-y: auto;
+    }
+
+    .s-footer {
+        padding-bottom: 30px;
+        @include setToCenter();
+        position: relative;
+    }
+}
+
+
+.user-profile {
+    position: absolute;
+    left: 55px;
+    bottom: 41px;
+    background-color: #fff;
+    box-shadow: 0px 10px 40px #02090F26;
+    border-radius: 3px;
+    min-width: 285px;
+    padding: 5px 0;
+
+    @keyframes revealProfilePopup {
+        from {
+            opacity: 0.5;
+            scale: 0.8;
+        }
+
+        to {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    animation: revealProfilePopup 0.07s ease-in-out forwards;
+
+    .up-profile {
+        padding: 15px;
+        @include flexAlign();
+        gap: 10px;
+        border-bottom: 1px solid var(--profileBorder);
+
+        .upp-content {
+            flex: 1;
+            text-align: left;
+
+            .uppc-name {
+                @include fontProperties(14px, 600, var(--textDark2));
+            }
+
+            .uppc-email {
+                @include fontProperties(12px, normal, var(--profileLightText));
+            }
+        }
+    }
+}
+
+.profile-menu {
+    border-bottom: 1px solid var(--profileBorder);
+    height: 40px;
+    padding: 0 15px;
+    @include flexAlign();
+    gap: 10px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    position: relative;
+
+    &:last-child {
+        border-bottom: unset;
+    }
+
+    .pm-icon {
+        @include setToCenter();
+        @include box(18px);
+        font-size: 20px;
+        color: var(--textColor);
+    }
+
+    .pm-content {
+        flex: 1;
+        @include fontProperties(13px, normal, var(--textDark));
+        transition: all 150ms ease-in-out;
+    }
+
+    .pm-right-icon {
+        @include setToCenter();
+        @include box(18px);
+        font-size: 20px;
+        color: var(--textColor);
+    }
+
+    &:hover {
+        background-color: var(--grayBatch);
+
+        .pm-content {
+            color: var(--profileMenuDark);
+            font-weight: 600;
+        }
+    }
+}
+
+.profile-submenus {
+    position: absolute;
+    left: calc(100% - 2px);
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0px 10px 40px #02090F26;
+    border-radius: 3px;
+    min-width: 170px;
+    padding: 5px 0;
+
+    .ps-menu {
+        border-bottom: 1px solid var(--profileBorder);
+        height: 40px;
+        padding: 0 15px;
+        @include flexAlign();
+        gap: 10px;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+        flex: 1;
+        @include fontProperties(13px, normal, var(--textDark));
+        transition: all 150ms ease-in-out;
+        color: var(--textColor);
+
+        &:last-child {
+            border-bottom: unset;
+        }
+
+        &:hover {
+            background-color: var(--grayBatch);
+            color: var(--profileMenuDark);
+        }
+    }
+}

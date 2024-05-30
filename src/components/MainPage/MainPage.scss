@@ -1,0 +1,16 @@
+@import "../../styles/mixins.scss";
+
+.main-page-content {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #51d5f721;
+    padding: 15px;
+    gap: 10px;
+
+    .main-body {
+        height: 100%;
+        border-radius: 10px;
+        background-color: white;
+    }
+}
