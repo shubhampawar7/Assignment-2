@@ -1,0 +1,46 @@
+@import "../../styles/mixins.scss";
+
+@mixin borderStyling(){
+    border-radius: 50%;
+    border: 1px solid var(--gray);
+    object-fit: cover;
+}   
+.avatar-comp-default {
+    @include box(100%);
+    @include setToCenter();
+    @include borderStyling();
+}
+
+.avatar {
+
+  .avatar-sm {
+    @include box(35px);
+    @include borderStyling();
+  }
+  
+  .avatar-md {
+    @include box(50px);
+    @include borderStyling();
+  }
+  
+  .avatar-lg {
+    @include box(70px);
+    @include borderStyling();
+  }
+  .avatar-comp-alt {
+    @include setToCenter();
+    // width: 100%;
+    // height: 100%;
+    background-color: var(--white);
+    color: var(--avatarAlt);
+    font-size: 13px;
+    font-weight: 600;
+    background-color: red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  .avatar-comp-alt{
+
+  }
+}

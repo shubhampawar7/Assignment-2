@@ -58,11 +58,13 @@
             flex: 1;
             gap: 5px;
             background-color: var(--taskGrayBg);
-            height: 40px;
+            height: auto;
+            // height: 40px;
             border-left: 8px solid transparent;
             border-right: 8px solid transparent;
             border-left: 8px solid var(--textDanger);
             transition: all 150ms ease-in-out;
+            padding: 5px 0;
 
             .ml-down-arrow-icon-small {
               @include box(15px);
@@ -82,6 +84,8 @@
                   @include fontProperties(13px, normal, va(--textLight));
                 }
                 .mtc-avatar {
+                  @include setToCenter();
+                  gap: 5px;
                   cursor: pointer;
                 }
               }
@@ -90,8 +94,7 @@
               width: 49px;
               cursor: pointer;
 
-
-              //action menus 
+              //action menus
               .action-menus-comp {
                 position: absolute;
                 background-color: #fff;
@@ -99,23 +102,22 @@
                 border-radius: 3px;
                 min-width: 100px;
                 right: 65px;
-                .amc-items{
+                .amc-items {
                   display: flex;
                   align-items: center;
                   gap: 5px;
                   border-bottom: 1px solid var(--inputLine);
                   height: 28px;
                   padding: 0 7px;
-                  .ai-content{
+                  .ai-content {
                     @include fontProperties(13px, normal, va(--textLight));
-
                   }
                   &:last-child {
                     border-bottom: unset;
-                }
-                  .ai-edit-icon{
+                  }
+                  .ai-edit-icon {
                     @include setToCenter();
-                    @include box(10px)
+                    @include box(10px);
                   }
                 }
               }

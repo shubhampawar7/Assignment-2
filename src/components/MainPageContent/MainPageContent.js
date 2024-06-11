@@ -7,8 +7,7 @@ import DownArrowIconSmall from "../../assets/Images/DownArrowIconSmall.png";
 import { Popover } from "@mantine/core";
 import EditIcon from "../../assets/Images/EditIcon.png";
 import DeleteIcon from "../../assets/Images/DeleteIcon.png";
-
-
+import Avatar2 from "../Avatar2/Avatar2";
 
 const MainPageContent = () => {
   return (
@@ -83,7 +82,16 @@ const TableRows = ({ data }) => {
           <div class="mr-task-comp">
             <div class="mtc-task-content">
               <div className="mtc-avatar">
-                <Avatar />
+                <Avatar2 />
+                <Avatar2 size="sm" alt="image" tooltip="images" />
+                <Avatar2
+                  size="sm"
+                  alt="image"
+                  tooltip="images"
+                  img={
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLE9i5GjHgyZyWriitYRvgygHGzmtP9gC7BBYRQeh03TtznLRorF_V7AyEwIQvx3EQ_ZbHgrJl5vMu1u0L12xI7g8JszSFUXyrH2W0fGc"
+                  }
+                />
               </div>
             </div>
           </div>
@@ -116,7 +124,7 @@ const TableRows = ({ data }) => {
 const ActionMenus = () => {
   return (
     <>
-      <div className="action-menus-comp" >
+      <div className="action-menus-comp">
         <div className="amc-items">
           <img className="ai-edit-icon" src={EditIcon}></img>
           <div className="ai-content">Edit</div>
