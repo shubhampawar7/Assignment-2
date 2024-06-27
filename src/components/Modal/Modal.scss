@@ -1,0 +1,51 @@
+@import "../../styles/mixins.scss";
+.modal {
+    // display: none;
+    position: absolute;
+    inset: 0;
+    @include setToCenter();
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    
+  }
+  
+  .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .modal-header .close {
+    cursor: pointer;
+    color: #aaa;
+    font-size: 24px;
+  }
+  
+  .modal-body {
+    padding: 15px 0;
+    overflow-y: auto;
+  }
+  
+  .modal-footer{
+    border-top: 1px solid black;
+    @include setToCenter();
+    gap: 10px;
+    padding: 5px;
+  }

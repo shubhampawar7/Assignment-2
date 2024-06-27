@@ -1,0 +1,70 @@
+@import "../../styles/mixins.scss";
+
+.button-comp {
+  height: 35px;
+  background: #007ef3;
+  border-radius: 5px;
+  text-align: center;
+  font: normal 600 13px/17px Mecellem;
+  color: #ffffff;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  outline: none;
+
+  &.sm {
+    height: 30px;
+  }
+
+  &.lg {
+    height: 40px;
+  }
+
+  &.primary {
+    background-color: #007ef3;
+  }
+
+  &.secondary {
+    background-color: #555;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+}
+
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #ffffff;
+    animation: spin 0.6s linear infinite;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  
+  .spinner-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #007ef3;
+    animation: spin 0.6s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

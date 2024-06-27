@@ -5,6 +5,8 @@ import SideBar from './components/Sidebar/Sidebar';
 import MainPage from './components/MainPage/MainPage';
 import { useEffect, useState } from 'react';
 import GlobalLoader from './components/GlobalLoader/GlobalLoader';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -30,6 +32,7 @@ useEffect(() => {
       </div>
       )
       }
+      <ToastContainer/>
     </Router>
   );
 }
